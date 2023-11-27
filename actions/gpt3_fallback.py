@@ -1,8 +1,10 @@
 import openai
 import os
 from dotenv import load_dotenv
-from rasa.core.actions import Action
-from rasa.core.events import SlotSet
+from rasa_sdk import Action
+from rasa_sdk.events import SlotSet
+#from rasa.core.actions import Action
+#from rasa.core.events import SlotSet
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")

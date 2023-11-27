@@ -1,63 +1,19 @@
 version: "3.1"
 
 rules:
-
-- rule: Greet User
-  steps:
-  - intent: greet
-  - action: utter_greet
-
-- rule: Play Video
+- rule: Play video
   steps:
   - intent: play_video
   - action: action_play_video
-
-- rule: Play Specific Video
-  steps:
-  - intent: play_specific_video
-  - action: action_play_specific_video
-
-- rule: Play Videos by Specific Artist
-  steps:
-  - intent: play_videos_by_specific_people
-  - action: action_play_videos_by_specific_artist
-
-- rule: Pause Video
+- rule: Pause video
   steps:
   - intent: pause_video
   - action: action_pause_video
-
-- rule: Resume Video
+- rule: Stop video
   steps:
-  - intent: resume_video
-  - action: action_resume_video
-
-- rule: Skip Video
+  - intent: stop_video
+  - action: action_stop_video
+- rule: Fallback
   steps:
-  - intent: skip_video
-  - action: action_skip_video
-
-- rule: Previous Video
-  steps:
-  - intent: previous_video
-  - action: action_previous_video
-
-- rule: Adjust Volume of Video
-  steps:
-  - intent: adjust_volume_video
-  - action: action_adjust_volume_video
-
-- rule: Seek in Video
-  steps:
-  - intent: seek_video
-  - action: action_seek_video
-
-- rule: Out of Scope
-  steps:
-  - intent: out_of_scope
-  - action: action_gpt_fallback
-
-- rule: Say Goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: nlu_fallback
+  - action: action_gpt3_fallback

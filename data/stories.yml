@@ -1,73 +1,23 @@
 version: "3.1"
 
 stories:
-
-- story: happy path greeting
+- story: Play and pause video
   steps:
   - intent: greet
   - action: utter_greet
-
-- story: user wants to play a video
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: play_video
-  - action: action_play_video
-
-- story: user wants to play a specific video
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: play_specific_video
-  - action: action_play_specific_video
-
-- story: user wants to play videos by a specific people
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: play_videos_by_specific_artist
-  - action: action_play_videos_by_specific_artist
-
-- story: user pauses and resumes video
-  steps:
   - intent: play_video
   - action: action_play_video
   - intent: pause_video
   - action: action_pause_video
-  - intent: resume_video
-  - action: action_resume_video
 
-- story: user adjusts volume of video
+- story: interactive_story_1
   steps:
-  - intent: play_video
-  - action: action_play_video
-  - intent: adjust_volume_video
-  - action: action_adjust_volume_video
-
-- story: user skips and goes back a video
-  steps:
-  - intent: play_video
-  - action: action_play_video
-  - intent: skip_video
-  - action: action_skip_video
-  - intent: previous_video
-  - action: action_previous_video
-
-- story: user seeks within a video
-  steps:
-  - intent: play_video
-  - action: action_play_video
-  - intent: seek_video
-  - action: action_seek_video
-
-- story: user says goodbye
-  steps:
-  - intent: greet
+  - intent: pause_video
+  - action: action_pause_video
+  - intent: stop
   - action: utter_greet
+  - intent: play_video
+  - action: action_play_video
   - intent: goodbye
-  - action: utter_goodbye
-
-- story: out of scope query
-  steps:
-  - intent: out_of_scope
-  - action: action_gpt_fallback
+  - intent: nlu_fallback
+  - action: /stop

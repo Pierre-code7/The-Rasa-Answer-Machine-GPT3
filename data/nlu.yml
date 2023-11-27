@@ -1,5 +1,4 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: play_video
   examples: |
     - play some videos
@@ -24,23 +22,7 @@ nlu:
     - play a video
     - can you play a video?
     - I want to watch a video
-
-- intent: play_specific_video
-  examples: |
-    - play the video of Bohemian Rhapsody
-    - start playing the video of Hotel California
-    - can you play the video of Shape of You?
-    - I want to watch the video of Purple Rain
-    - play the video Yesterday
-
-- intent: play_videos_by_specific_people
-  examples: |
-    - play videos by The Beatles
-    - I want to watch videos by Taylor Swift
-    - play Ed Sheeran's videos
-    - Can you play some videos by Adele?
-    - I'd like to watch videos by Drake
-
+    - play the video
 - intent: pause_video
   examples: |
     - pause the video
@@ -48,53 +30,14 @@ nlu:
     - pause the video playing
     - hold the video please
     - stop playing the video now
-
-- intent: resume_video
+    - pause video
+- intent: stop
   examples: |
-    - resume playing the video
-    - continue the video
-    - start the video again
-    - keep playing the video
-    - resume the video
-
-- intent: skip_video
-  examples: |
-    - skip this video
-    - next video please
-    - I don't like this video, skip it
-    - go to the next video
-    - skip to the next video
-
-- intent: previous_video
-  examples: |
-    - play the previous video
-    - go back one video
-    - I want to watch the last video again
-    - previous video please
-    - replay the previous video
-
-- intent: adjust_volume_video
-  examples: |
-    - turn up the volume on the video
-    - lower the video volume please
-    - increase the volume of the video
-    - make the video louder
-    - I need a quieter volume for the video
-
-- intent: seek_video
-  examples: |
-    - go to the middle of the video
-    - skip to two minutes in the video
-    - rewind the video a little
-    - fast forward the video
-    - jump to the best part of the video
-
-- intent: out_of_scope
-  examples: |
-    - I want to order food
-    - What is 2 + 2?
-    - Who's the US President?
-
+    - stop playing the video
+    - don't continue the video
+    - stop the video again
+    - do not keep playing the video
+    - stop video
 - intent: goodbye
   examples: |
     - bye
@@ -105,3 +48,6 @@ nlu:
     - I'm off
     - I have to go
     - it was nice talking to you
+- intent: nlu_fallback
+  examples: |
+    - who is Bill naysmith
