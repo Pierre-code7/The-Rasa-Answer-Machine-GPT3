@@ -1,36 +1,56 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+- greet
+- play_video
+- play_specific_video
+- play_videos_by_specific_artist
+- pause_video
+- resume_video
+- skip_video
+- previous_video
+- adjust_volume_video
+- seek_video
+- inform
+- goodbye
+- out_of_scope
+
+entities:
+- location
+- price
+- cuisine
+
+actions:
+- utter_greet
+- action_play_video
+- action_play_specific_video
+- action_play_videos_by_specific_artist
+- action_pause_video
+- action_resume_video
+- action_skip_video
+- action_previous_video
+- action_adjust_volume_video
+- action_seek_video
+- utter_ask_howcanhelp
+- utter_on_it
+- utter_ask_cuisine
+- utter_ask_num_people
+- utter_goodbye
+- action_gpt_fallback
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  - text: "Hello! How can I assist you today?"
+  utter_ask_howcanhelp:
+  - text: "How can I help you with your booking?"
+  utter_on_it:
+  - text: "Okay, looking for something in Rome that's cheap."
+  utter_ask_cuisine:
+  - text: "Any particular cuisine you're interested in?"
+  utter_ask_num_people:
+  - text: "How many people will be dining?"
   utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-actions:
-  - action_gpt3_fallback
+  - text: "Goodbye! Have a great day!"
 
 session_config:
   session_expiration_time: 60
