@@ -35,7 +35,7 @@ class ActionStopVideo(Action):
         dispatcher.utter_message(text="Stopping video.")
         return []
 
-class ActionStopVideo(Action):
+class ActionGPT3Fallback(Action):
     def name(self) -> str:
         return "action_gpt3_fallback"
 
