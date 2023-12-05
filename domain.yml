@@ -5,6 +5,7 @@ intents:
   - play_video
   - play_specific_video
   - play_videos_by_specific_people
+  - play_videos_by_specific_artist
   - pause_video
   - resume_video
   - skip_video
