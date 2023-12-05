@@ -105,3 +105,11 @@ nlu:
     - I'm off
     - I have to go
     - it was nice talking to you
+    
+- intent: play_videos_by_specific_artist
+  examples: |
+    - play videos by The Beatles
+    - I want to watch videos by Taylor Swift
+    - Can you play some videos by Ed Sheeran?
+    - Show me videos from Adele
+    - Play Drake's music videos
