@@ -1,56 +1,39 @@
 version: "3.1"
 
 intents:
-- greet
-- play_video
-- play_specific_video
-- play_videos_by_specific_artist
-- pause_video
-- resume_video
-- skip_video
-- previous_video
-- adjust_volume_video
-- seek_video
-- inform
-- goodbye
-- out_of_scope
-
-entities:
-- location
-- price
-- cuisine
+  - greet
+  - play_video
+  - play_specific_video
+  - play_videos_by_specific_people
+  - pause_video
+  - resume_video
+  - skip_video
+  - previous_video
+  - adjust_volume_video
+  - seek_video
+  - out_of_scope
+  - goodbye
 
 actions:
-- utter_greet
-- action_play_video
-- action_play_specific_video
-- action_play_videos_by_specific_artist
-- action_pause_video
-- action_resume_video
-- action_skip_video
-- action_previous_video
-- action_adjust_volume_video
-- action_seek_video
-- utter_ask_howcanhelp
-- utter_on_it
-- utter_ask_cuisine
-- utter_ask_num_people
-- utter_goodbye
-- action_gpt_fallback
+  - utter_greet
+  - action_play_video
+  - action_play_specific_video
+  - action_play_videos_by_specific_artist
+  - action_pause_video
+  - action_resume_video
+  - action_skip_video
+  - action_previous_video
+  - action_adjust_volume_video
+  - action_seek_video
+  - utter_goodbye
+  - action_gpt_fallback
 
 responses:
   utter_greet:
-  - text: "Hello! How can I assist you today?"
-  utter_ask_howcanhelp:
-  - text: "How can I help you with your booking?"
-  utter_on_it:
-  - text: "Okay, looking for something in Rome that's cheap."
-  utter_ask_cuisine:
-  - text: "Any particular cuisine you're interested in?"
-  utter_ask_num_people:
-  - text: "How many people will be dining?"
+    - text: "Hello! How can I assist you today?"
   utter_goodbye:
-  - text: "Goodbye! Have a great day!"
+    - text: "Goodbye! Have a great day!"
+
 
 session_config:
   session_expiration_time: 60
